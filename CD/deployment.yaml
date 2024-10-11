@@ -14,7 +14,7 @@ spec:
         app: raphael-app
     spec:
       containers:
-      - name: raphaelhoffa/ci
+      - name: raphaelcontainer
         image: raphaelhoffa/ci:45
         imagePullPolicy: Always
         ports:
