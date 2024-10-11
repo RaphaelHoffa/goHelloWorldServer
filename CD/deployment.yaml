@@ -15,7 +15,8 @@ spec:
     spec:
       containers:
       - name: raphaelcontainer
-        image: {{.Values.image}}
+        #image: {{.Values.image}}
+        image: raphaelhoffa/ci:45
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
