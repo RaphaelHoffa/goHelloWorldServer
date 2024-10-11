@@ -1,7 +1,7 @@
 # name: example  
 # replicas: 2  
   
-image: raphaelhoffa/ci:<+pipeline.sequenceId>
+image: raphaelhoffa/ci:45
 # # dockercfg: <+artifact.imagePullSecret>  
   
 # createNamespace: true  
