@@ -7,6 +7,6 @@ metadata:
 spec:
   containers:
   - name: lb-container
-    image: raphaelhoffa/ci
+    image: raphaelhoffa/ci:10
     ports:
       - containerPort: 8080
