@@ -1,8 +1,8 @@
 # name: example  
 # replicas: 2  
   
-image: raphaelhoffa/ci:45
-# # dockercfg: <+artifact.imagePullSecret>  
+#image: raphaelhoffa/ci:45
+#dockercfg: <+artifact.imagePullSecret>  
   
 # createNamespace: true  
 # namespace: CD  
