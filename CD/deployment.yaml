@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: raphael-container
-        image: raphaelhoffa/ci:10
+        image: raphaelhoffa/ci:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80
