@@ -28,10 +28,10 @@ spec:
         #     secretKeyRef:
         #       name: raphael-ci-secret
         #       key: ci-secret-key
-        resources:
-          limits:
-            memory: "1Gi"
-            cpu: "1"
-          requests:
-            memory: "512Mi"
-            cpu: "0.5"
+        # resources:
+        #   limits:
+        #     memory: "1Gi"
+        #     cpu: "1"
+        #   requests:
+        #     memory: "512Mi"
+        #     cpu: "0.5"
