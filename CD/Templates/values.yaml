@@ -1,21 +1,21 @@
 name: example  
 replicas: 2  
   
-image: <+artifact.image>  
+image: raphaelhoffa/ci 
 # dockercfg: <+artifact.imagePullSecret>  
   
 createNamespace: true  
-namespace: <+infra.namespace>  
+namespace: CD  
   
 # Service Type allow you to specify what kind of service you want.  
 # Possible values for ServiceType are:  
 # ClusterIP | NodePort | LoadBalancer | ExternalName  
-serviceType: LoadBalancer  
+# serviceType: LoadBalancer  
   
-# A Service can map an incoming port to any targetPort.  
-# targetPort is where application is listening on inside the container.  
-servicePort: 80  
-serviceTargetPort: 80  
+# # A Service can map an incoming port to any targetPort.  
+# # targetPort is where application is listening on inside the container.  
+# servicePort: 8080  
+# serviceTargetPort: 80  
   
 # Specify all environment variables to be added to the container.  
 # The following two maps, config and secrets, are put into a ConfigMap  
