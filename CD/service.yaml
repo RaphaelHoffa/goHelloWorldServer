@@ -1,14 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: raphael-ci-service
-  namespace: raphael-deployment
-  labels:
-    app: raphael-ci
+  name: raphael-service
+  namespace: raphael-namespace
 spec:
-  ports:
-  - port: 80
-    targetPort: 8080
-    protocol: TCP
   selector:
-    app: raphael-ci
+    app: raphael-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: ClusterIP

@@ -1,37 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: raphael-ci-deployment
-  namespace: raphael-deployment
-  labels:
-    app: raphael-ci
+  name: raphael-deployment
+  namespace: raphael-namespace
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
-      app: raphael-ci
+      app: raphael-app
   template:
     metadata:
       labels:
-        app: raphael-ci
+        app: raphael-app
     spec:
-      # serviceAccountName: raphael-service-account
       containers:
-      - name: raphael-ci
-        image: raphaelhoffa/ci:latest
-        imagePullPolicy: Always
-        # env:
-        # - name: CI_ENV
-        #   value: "production"
-        # - name: CI_SECRET
-        #   valueFrom:
-        #     secretKeyRef:
-        #       name: raphael-ci-secret
-        #       key: ci-secret-key
-        # resources:
-        #   limits:
-        #     memory: "1Gi"
-        #     cpu: "1"
-        #   requests:
-        #     memory: "512Mi"
-        #     cpu: "0.5"
+      - name: raphael-container
+        image: raphaelhoffa/ci
+        ports:
+        - containerPort: 80
