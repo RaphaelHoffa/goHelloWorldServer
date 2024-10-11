@@ -1,19 +1,37 @@
-apiVersion: apps/v1  
-kind: Deployment  
-metadata:  
-  name: cd-deployment  
-spec:  
-  replicas: 3  
-  selector:  
-    matchLabels:  
-      app: cd  
-  template:  
-    metadata:  
-      labels:  
-        app: cd  
-    spec:  
-      imagePullSecrets:  
-      - name: cd
-      containers:  
-      - name: cd  
-        image: raphaelhoffa/ci
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: raphael-ci-deployment
+  namespace: raphael-deployment
+  labels:
+    app: raphael-ci
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: raphael-ci
+  template:
+    metadata:
+      labels:
+        app: raphael-ci
+    spec:
+      serviceAccountName: raphael-service-account
+      containers:
+      - name: raphael-ci
+        image: raphaelhoffa/ci:latest
+        imagePullPolicy: Always
+        # env:
+        # - name: CI_ENV
+        #   value: "production"
+        # - name: CI_SECRET
+        #   valueFrom:
+        #     secretKeyRef:
+        #       name: raphael-ci-secret
+        #       key: ci-secret-key
+        resources:
+          limits:
+            memory: "1Gi"
+            cpu: "1"
+          requests:
+            memory: "512Mi"
+            cpu: "0.5"
