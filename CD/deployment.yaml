@@ -4,7 +4,7 @@ metadata:
   name: raphael-deployment
   namespace: raphael-namespace
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: raphael-app
