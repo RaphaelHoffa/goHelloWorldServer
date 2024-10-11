@@ -8,6 +8,6 @@ spec:
     app: raphael-app
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80
+      port: 8080       # Expose port 8080 on the service
+      targetPort: 80   # Route it to container port 80
   type: ClusterIP
