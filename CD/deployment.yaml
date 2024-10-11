@@ -15,7 +15,7 @@ spec:
       labels:
         app: raphael-ci
     spec:
-      serviceAccountName: raphael-service-account
+      # serviceAccountName: raphael-service-account
       containers:
       - name: raphael-ci
         image: raphaelhoffa/ci:latest
