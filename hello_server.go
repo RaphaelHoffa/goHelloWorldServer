@@ -23,7 +23,7 @@ func CreateGreeting(name string) string {
 	if name == "" {
 		name = "Guest"
 	}
-	return "What's up , " + name + ", how are you doing today?\n"
+	return "Hey " + name + ", how are you doing today?\n"
 }
 
 func main() {
